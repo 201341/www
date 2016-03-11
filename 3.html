@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta http-equiv="Content" content="text/html" charest="utf-8">
+<title>传参</title>
+<style>
+	body,input,button{font:12px/1.5 Tahoma;}
+	input{border:1px solid #ccc;padding:3px;}
+	button{cursor:pointer;}
+	#outer{text-align:center;}
+</style>
+<script>
+	function myfun(a,b){
+		alert(a.value);
+		alert(b.value);
+	}
+	window.onload=function(){
+		var oinput=document.getElementsByTagName("input");
+		var obtn=document.getElementsByTagName("button")[0];
+		obtn.onclick=function(){
+			myfun(oinput[0],oinput[1]);
+		}
+	}
+</script>
+<head>
+<body>
+<div id="outer">
+<p>
+<input type="text" value="北京"/>
+</p>
+<p>
+<input type="text" value="朝阳"/>
+</p>
+<p>
+<button>传参</button>
+</p>
+</div>
+</body>
+</head>
