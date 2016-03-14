@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head lang="en">
+<meta http-equiv="Content-Type" content="text/html" charest="utf-8">
+<style>
+	body{margin:auto 0;font:12px/1.5 Tahoma;}
+	p{margin-bottom:5px;}
+	input{padding:4px;border:1px solid #ccc;}
+	button{margin-right:5px;}
+	label{width:5em;display:inline-block;text-align:center;}
+	#outer{margin:0 auto;width:300px;}
+	#div1{width:180px;height:180px;margin:0 auto;padding:10px;border:1px solid blue;background-color: black;color:white;}
+	
+	
+</style>
+<script>
+	window.onload=function(){
+		var oinput=document.getElementById("outer").getElementsByTagName("input");
+		var obtn=document.getElementsByTagName("button");
+		var odiv=document.getElementById("div1");
+		obtn[0].onclick=function(){
+			odiv.style[oinput[0].value]=oinput[1].value;
+		}
+		obtn[1].onclick=function(){
+			odiv.removeAttribute("style");
+		}
+
+	}
+</script>
+</head>
+<body>
+<div id="outer">
+	<p><label>属性名:</label><input type="text" value="background"/></p>
+	<p><label>属性值:</label><input type="text" value="red"/></p>
+	<p><label></label><button>确定</button><button>重置</button></p>
+</div>
+<div id="div1">
+	<p>在上方输入框输入"属性名"及"属性值"，点击确定按钮查看效果。<p>
+</div>
+</body>
+</html>
