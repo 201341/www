@@ -1,0 +1,152 @@
+
+html,body{
+	margin:0px;	
+	padding:0px;
+	color:#FFF;
+	background-color: #fff;
+
+	min-width:1000px;
+	min-height:500px;
+	width:100%;
+	height:100%;
+	z-index:-1;
+	overflow:hidden;
+}
+body,td,th {
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 24px;
+}
+a, a:link, a:visited{
+	color:#000;
+	text-decoration:none;
+}
+
+
+#dealer{
+	height:200px;
+	width:100%;
+	border:1px solid #000;
+	margin:10px auto;
+}
+#player{
+	height:200px;
+	width:100%;
+	border:1px solid #000;
+	margin:10px auto;
+}
+#option{
+	height:100px;
+	border:1px solid #000;
+}
+
+
+
+#Chips{
+	float:left;
+	width:50%;
+	height:100px;
+
+}
+#Actions{
+	float:right;
+	width:50%;
+	height:100px;
+
+}
+
+.Chip{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    display:inline-block;
+    background-image: url(../img/Chips.png);
+}
+
+#Chips .Chip#Bet5{
+	background-position:0px 0px;
+	left:0px;
+	top:25px;
+
+}
+#Chips .Chip#Bet25{
+	left:30px;
+	top:25px;
+	background-position:-63px 0px;
+}
+#Chips .Chip#Bet50{
+	background-position:-130px 0px;
+	left:60px;
+	top:25px;
+}
+#Chips .Chip#Bet100{
+	background-position:-194px 0px;
+	left:90px;
+	top:25px;
+}
+#Chips .Chip#Bet500{
+	background-position:-260px 0px;
+	left:120px;
+	top:25px;
+}
+
+
+
+
+.Action{
+	position:relative;
+	width:60px;
+	height:60px;
+	
+	-moz-border-radius:30px;
+	-webkit-border-radius:30px;
+	
+	display:inline-block;
+	background-image:url(../img/Actions.png);
+}
+
+
+
+.Action#Stand{
+	background-position:0px 0px;
+	top:25px;
+	left: 150px;
+}
+.Action#Hit{
+	background-position:-60px 0px;
+	left:180px;
+	top:25px;
+}
+.Action#Split{
+	background-position:-120px 0px;
+	left:210px;
+	top:25px;
+}
+.Action#DoubleDown{
+	background-position:-180px 0px;
+	left:240px;
+	top:25px;
+}
+.Action#Surrender{
+	background-position:-240px 0px;
+	left:275px;
+	top:25px;
+}
+
+
+#Cash{
+	width:100%;
+	height:50px;
+	text-indent: 10%;
+}
+#Cash p{
+	font:20px "微软雅黑";
+	color:black;
+	line-height:50px;
+}
+
+
+#start{
+	width:100%;
+	height:50px;
+	text-indent:40%;
+}
