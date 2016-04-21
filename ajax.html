@@ -1,0 +1,85 @@
+<!doctype html>
+<head>
+<meta http-equiv="Content" content="text/html" charest="utf-8">
+<title>ajax</title>
+<style>
+*{
+	margin:0px;
+	padding:0px;
+}
+ul{
+	list-style-type:none;
+}
+#wrap{
+	width:1200px;
+	margin:30px auto 5px;
+	background-color: #f5f5f5;
+	border:1px solid blue;
+
+}
+#wrap:after{
+	clear:both;
+	display:block;
+	content:".";
+	height:0px;
+	visibility:hidden;
+}
+.l-content{
+	width:50%;
+	float:left;
+	background-color: #ffe3d7;
+}
+.r-content{
+	width:30%;
+	float:left;
+	background-color:lightblue;
+}
+
+.r-content input{
+	height:20px;
+	width:200px;
+	outline:none;
+	margin-top:10px;
+}
+.oul ul{
+	width:200px;
+	background-color:#f1f1f1;
+	display:none;
+
+}
+.oul ul li{
+	height:22px;
+	border-bottom-style: 1px solid #fff;
+}
+.active{
+	background-color:blue;
+}
+span{
+	color:red;
+}
+div{
+	padding:10px 20px;
+}
+</style>
+</head>
+<body>
+<div id="wrap">
+<div class="l-content main">
+<p>输入框说明</p>
+<ul>
+<li> 数据放在ajax.txt</li>
+<li>允许用鼠标点击选中提示栏的某个选项</li>
+<li>允许使用键盘上下键来选中提示栏中的某个选项，回车确认选中</li>
+<li>选中后，提示内容更到输入框中</li>
+</ul>
+</div>
+<div class="r-content main">
+<p>输入a,b试一试</p>
+<input type="text" class="inputArea">
+<ul class="oul">
+</ul>
+</div>
+</div>
+<script src="js/ajax.js"></script>
+</body>
+</html>
