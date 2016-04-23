@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content" content="text/html" charest="utf-8">
+<title>个人任务管理系统</title>
+<link rel="stylesheet" href="http://apps.bdimg.com/libs/fontawesome/4.2.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/todo.css">
+</head>
+<body>
+	<div class="header">
+		<h1><i class="fa fa-th"></i>Just Do it</h1>
+	</div>
+	<div class="main">
+		<div class="left">
+			<div class="all-task">
+				<i class="fa fa-globe"></i>所有任务(<span>1</span>)
+			</div>
+			<div class="cate">
+				<i class="fa fa-list-ul"></i>分类列表
+			</div>
+			<div class="list">
+			<ul>
+				<li>
+					<h2><i class="fa fa-folder-open"></i><span>默认分类</span>(1)</h2>
+					<ul>
+						<li><h3><i class="fa fa-folder-o"></i><span>默认子分类</span>(1)</h3></li>
+					</ul>
+				</li>
+			</ul>
+			</div>
+			<button class="add"><i class="fa fa-plus"></i>增加列表</button>
+		</div>
+		<div class="mid">
+			<div class="status">
+				<button id="all-tasks" class="active">所有</button>
+				<button id="finished">未完成</button>
+				<button id="unfinished">已完成</button>
+			</div>
+			<div class="task-list">
+				<div>2016-4-21</div>
+				<ul>
+					<li taskid="0">201341</li>
+				</ul>
+			</div>
+			<button class="add-task add"><i class="fa fa-plus"></i>新增任务</button>
+
+		</div>
+		<div class="right">
+			<div class="task-title">
+				<h1 class="todo-title">你想干嘛</h1>
+				<div class="manipulate">
+					<a id="checkTask"><li class="fa fa-check-square-o"></li></a>
+					<a id="changeTask"><li class="fa fa-pencil-square-o"></li></a>
+				</div>
+			</div>
+			<div class="task-date">
+				任务日期：<span>2016-4-21</span>
+			</div>
+			<div class="content">
+				<textarea class="textarea-content" placeholder="请输入任务内容" readonly="readonly" disabled="disabled">打你么么哒</textarea>
+			</div>
+			<div class="button-area">
+				<button class="save">保存修改</button>
+				<button class="cancel">放弃修改</button>
+			</div>
+		</div>
+	</div>
+</body>

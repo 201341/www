@@ -17,7 +17,8 @@
 			}
 		},
 		prompt: function(data) {
-			var reg = new RegExp("^" + value, "i");
+			var value=oinput.value;
+			var reg = new RegExp("^"+value,"i");
 			var promptArr = eval(data);
 			var liEement = "";
 			for (var i = 0, len = promptArr.length; i < len; i++) {
@@ -80,8 +81,13 @@
 
 	}
 
-	function addclass(element, newclassname) {
-		element.className = newclassname;
+	function addclass(event, newclassname) {
+		var ev=event||window.event;
+		var target=ev.target||ev.srcElement;
+		if(target.tagName.toLowerCase()==="li"){
+			target.className = newclassname;
+		}
+
 	}
 
 	function removeclass(element, oldClassName) {
@@ -93,7 +99,7 @@
 		 */
 	function removeLiclass() {
 		for (var i = 0, len = oli.length; i < len; i++) {
-			oli.className = "";
+			oli[i].className = "";
 		}
 	}
 
@@ -101,7 +107,7 @@
 	 * 删除<span>标签
 	 */
 	function deleteSpan(stringHtml) {
-		var reg = /^<span>(\w)<\/span>(\w)/;
+		var reg = /^<span>(\w+)<\/span>(\w+)/;
 		var stringArr = stringHtml.match(reg);
 		if (stringArr) {
 			return stringArr[1] + stringArr[2];
@@ -110,16 +116,16 @@
 		}
 	}
 
-	oul.addEventListener("mouseover", function() {
+	oul.addEventListener("mouseover", function(event) {
 		removeLiclass();
-		addclass(this, "active");
+		addclass(event,"active");
 	})
 	oul.addEventListener("mouseout", function() {
-		removeClass(this, "active");
+		removeclass(this, "active");
 
 	})
-	oul.addEventListener("click", function() {
-		oinput.value = deleteSpan(this.innerHTML);
+	oul.addEventListener("click", function(event) {
+		oinput.value = deleteSpan(event.target.innerHTML);
 		oul.style.display = "none";
 	})
 	oinput.addEventListener("input",function(event){
